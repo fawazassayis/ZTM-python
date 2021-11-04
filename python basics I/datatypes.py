@@ -39,30 +39,23 @@ string = "A bunch of characters" # defining a string
 long_string = """ """ # long string ( same with long comments )
 super_long_string = string + long_string # strings are concatinatable
 "Hello" + 5 # but only with other strings 
-# type conversion
-to_convert = "731"
-int(to_convert) # 771
-float(to_convert) # 771.0
-str(to_convert) # "771"
-bool(to_convert) # True
-list(to_convert) # ["7", "7", "1"]
-tuple(to_convert) # ("7", "7", "1")
-set(to_convert) # {'7', '1'}
-dict(list(to_convert)) #
+string = '\t [tab] that\'s \n \'long\'a string'  # escape sequences
 
-# escape sequence
-string = '\t [tab] that\'s \n \'long\'a string' 
-formatted strings
+# formatted strings
 name = "Fawaz"
 age = 18
-print(f"hi {name}. You are {age} years old!") # python 3
+print(f"hi {name}. You are {age} years old!") # python 3 -> recommended
 print("hi {1}. You are {0} years old!".format(age, name)) # variables in format are indexed, we can chose which goes where with index
-print("hi {name2}. You are {0} years old!".format(age, name, name2 = "Stippy"))
-# string methods
-len(name)
-name.replace("z", "s")
+print("hi {name2}. You are {0} years old!".format(age, name2 = "Stippy")) # when defining a var inside format() we must use it's name
+
+# * Most used string methods
 name.capitalize()
-name.endswith("z")
+name.count("a", 0, len(name)) # 2
+name.endswith("z") # True
+name.find("a") # 1, the index of the first occurrence  of "a"
+name.index("w") # 2
+name.replace("z", "s")
+# https://www.w3schools.com/python/python_ref_string.asp for the full list
 
 # * lists ( most basic data structure )
 nums = [0, 1, 2, 3, 4, 5] # creating a list
